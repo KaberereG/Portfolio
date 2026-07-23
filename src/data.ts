@@ -236,8 +236,8 @@ export const PROJECTS: Project[] = [
   {
     id: 'project-1',
     name: 'Treebula',
-    images: ['/images/shaba-marketplace.png'],
+    images: ['src/images/login.png'],
     link:'https://treebula.se/',
-    description: "Contributed to the development of Treebula's core platform by building and enhancing critical customer-facing features including subscription management, recurring payments, pricing engines, reporting dashboards, and CRM integrations. Refactored application architecture, optimized backend performance, and delivered maintainable full-stack solutions",
+    description: "Contributed to the development of Treebula's core platform by building and enhancing critical customer-facing features including subscription management, recurring payments, login authentication,pricing engines, reporting dashboards, and CRM integrations. Refactored application architecture, optimized backend performance, and delivered maintainable full-stack solutions",
     technologies: 'React, Typescript, PostgreSQL, Django, FastAPI, Tailwind, Bootstrap, Shadcn, Docker, Leaflet, AWS, REST API, Puck CMS'
   }]
