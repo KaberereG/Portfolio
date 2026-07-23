@@ -1,4 +1,5 @@
 import { Skill, TimelineItem, Project } from './types';
+import login from './public/images/login.png';
 
 export const SKILLS: Skill[] = [
   {
@@ -236,7 +237,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'project-1',
     name: 'Treebula',
-    images: ['src/images/login.png'],
+    images: ['/images/overblick.png'],
     link:'https://treebula.se/',
     description: "Contributed to the development of Treebula's core platform by building and enhancing critical customer-facing features including subscription management, recurring payments, login authentication,pricing engines, reporting dashboards, and CRM integrations. Refactored application architecture, optimized backend performance, and delivered maintainable full-stack solutions",
     technologies: 'React, Typescript, PostgreSQL, Django, FastAPI, Tailwind, Bootstrap, Shadcn, Docker, Leaflet, AWS, REST API, Puck CMS'
