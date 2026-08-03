@@ -1,10 +1,10 @@
 "use client";
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, type Variants } from 'motion/react';
 import { ChevronDown, Sparkles } from 'lucide-react';
 
 export default function Hero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -15,7 +15,7 @@ export default function Hero() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
@@ -24,10 +24,10 @@ export default function Hero() {
     }
   };
 
-  const scrollToStack = () => {
-    const stackElement = document.getElementById('stack');
-    if (stackElement) {
-      stackElement.scrollIntoView({ behavior: 'smooth' });
+  const scrollToProjects = () => {
+    const projectsElement = document.getElementById('projects');
+    if (projectsElement) {
+      projectsElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -97,7 +97,7 @@ export default function Hero() {
           className="pt-12"
         >
           <button
-            onClick={scrollToStack}
+            onClick={scrollToProjects}
             className="inline-flex flex-col items-center gap-3 group cursor-pointer"
           >
             <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#1A1A1A]/40 group-hover:text-primary transition-colors">

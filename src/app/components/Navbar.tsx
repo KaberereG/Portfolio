@@ -19,7 +19,7 @@ export default function Navbar({ onConnectClick }: NavbarProps) {
       setScrolled(window.scrollY > 50);
 
       // Simple intersection tracker
-      const sections = ['hub', 'stack', 'journey'];
+      const sections = ['hub', 'projects', 'stack', 'journey'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -66,7 +66,7 @@ export default function Navbar({ onConnectClick }: NavbarProps) {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            {['hub', 'stack', 'journey'].map((section) => (
+            {['hub', 'projects', 'stack', 'journey'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -110,7 +110,7 @@ export default function Navbar({ onConnectClick }: NavbarProps) {
         } md:hidden flex flex-col justify-between p-8 pt-24`}
       >
         <div className="flex flex-col gap-6">
-          {['hub', 'stack', 'journey'].map((section, idx) => (
+          {['hub', 'projects', 'stack', 'journey'].map((section, idx) => (
             <button
               key={section}
               onClick={() => scrollToSection(section)}

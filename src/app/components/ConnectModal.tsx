@@ -80,15 +80,12 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
               <div className="space-y-6">
                 <div className="space-y-1">
                   <h3 className="font-syne text-2xl font-extrabold uppercase tracking-tight text-[#1A1A1A]">
-                    Direct Connection
+                    Connect with me
                   </h3>
-                  <p className="font-mono text-[10px] uppercase text-primary tracking-widest font-semibold">
-                    Telemetry & Network Gates
-                  </p>
                 </div>
 
                 <p className="font-sans text-[#1A1A1A]/70 text-xs leading-relaxed font-light">
-                  Establish a secure connection channel. If you have specific system integration guidelines or technical requests, dispatch them directly.
+                  I am always open to new opportunities, collaborations, and discussions. Whether you have a project in mind, want to discuss potential partnerships, or simply wish to connect, feel free to reach out. Your message will be received securely and will be responded to promptly.
                 </p>
 
                 {/* Info List */}
@@ -96,8 +93,8 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
                   <div className="flex items-center gap-3">
                     <Mail size={14} className="text-primary" />
                     <span className="text-[#1A1A1A]/40">EMAIL //</span>
-                    <a href="mailto:acework243@gmail.com" className="hover:text-primary transition-colors font-medium">
-                      acework243@gmail.com
+                    <a href="mailto:waitkabz@gmail.com" className="hover:text-primary transition-colors font-medium">
+                      waitkabz@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
@@ -204,7 +201,7 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
                     className="w-full font-mono text-xs uppercase tracking-[0.25em] bg-[#1A1A1A] text-white font-extrabold py-4 hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer active:scale-95 flex items-center justify-center gap-2"
                   >
                     <Send size={12} />
-                    Dispatch Secure Signal
+                    Send Message
                   </button>
                 </div>
               </form>
@@ -227,7 +224,7 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
               {/* Social Channels */}
               <div className="flex gap-4 pt-4 border-t border-[#1A1A1A]/10">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/KaberereG"
                   target="_blank"
                   rel="noreferrer"
                   className="p-2.5 border border-[#1A1A1A]/10 hover:border-primary hover:text-primary text-[#1A1A1A]/60 transition-all cursor-pointer"
@@ -236,7 +233,7 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
                   <Github size={16} />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/grace-kaberere-21512b167"
                   target="_blank"
                   rel="noreferrer"
                   className="p-2.5 border border-[#1A1A1A]/10 hover:border-primary hover:text-primary text-[#1A1A1A]/60 transition-all cursor-pointer"

@@ -208,7 +208,7 @@ export const JOURNEY: TimelineItem[] = [
     id: 'role-2',
     period: 'September 2021 — September 2024',
     title: 'Full Stack Developer',
-    company: 'The Shaba',
+    company: 'The Shaba - Part time',
     description: 'Developed the mobile and web platforms for a high-traffic e-commerce marketplace, implementing real-time dashboards.',
     details: [
       'Led the end-to-end development of Shaba mobile and web platforms, driving technical decisions across product design, architecture, implementation, deployment, and ongoing platform improvements.',
@@ -241,4 +241,13 @@ export const PROJECTS: Project[] = [
     link:'https://treebula.se/',
     description: "Contributed to the development of Treebula's core platform by building and enhancing critical customer-facing features including subscription management, recurring payments, login authentication,pricing engines, reporting dashboards, and CRM integrations. Refactored application architecture, optimized backend performance, and delivered maintainable full-stack solutions",
     technologies: 'React, Typescript, PostgreSQL, Django, FastAPI, Tailwind, Bootstrap, Shadcn, Docker, Leaflet, AWS, REST API, Puck CMS'
-  }]
+  },
+  {
+    id: 'project-2',
+    name: 'The Shaba',
+    images: ['/images/shaba.jpeg'],
+    link:'https://5f99bc-49.myshopify.com/',
+    description: "Independently built and led the end-to-end development of The Shaba's mobile and web internal platforms, driving technical decisions across product design, architecture, implementation, deployment, and ongoing platform improvements. Partnered with founders and business stakeholders to gather requirements, define product roadmaps, and translate business objectives into scalable technical solutions.",
+    technologies: 'Kotlin, React, Javascript, Nodejs, MySQL, Android, Firebase'
+  }
+]

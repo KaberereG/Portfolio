@@ -29,7 +29,7 @@ export default function Footer({ onConnectClick }: FooterProps) {
           </p>
           <div className="flex gap-6 text-[10px] font-mono uppercase tracking-wider">
             <a
-              href="https://github.com"
+              href="https://github.com/KaberereG"
               target="_blank"
               rel="noreferrer"
               className="text-[#1A1A1A]/60 hover:text-primary transition-colors cursor-pointer"
@@ -37,7 +37,7 @@ export default function Footer({ onConnectClick }: FooterProps) {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/grace-kaberere-21512b167"
               target="_blank"
               rel="noreferrer"
               className="text-[#1A1A1A]/60 hover:text-primary transition-colors cursor-pointer"

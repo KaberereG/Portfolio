@@ -17,7 +17,15 @@ export default function Projects() {
                                 size={18}
                                 className="absolute top-4 right-4 text-[#1A1A1A]/40 group-hover:text-primary transition-colors"
                                 />
-                            <Image src={project.images[0]} alt={project.name} className="w-full object-cover" width={400} height={200} />
+                           <div className="relative cursor-pointer w-full h-64 ">
+                                <Image
+                                    src={project.images[0]}
+                                    alt={project.name}
+                                    fill
+                                    className="object-contain"
+                                    sizes="(max-width: 768px) 100vw, 400px"
+                                />
+                            </div>
                             <div className="p-4">
                                 <h3 className="font-syne text-xl md:text-2xl font-bold text-[#1A1A1A] mb-1 uppercase tracking-tight group-hover:text-primary transition-colors">{project.name}</h3>
                                 <p className="font-sans text-[#1A1A1A]/70 text-sm font-light leading-relaxed mb-4">{project.description}</p>
