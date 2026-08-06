@@ -1,9 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { isRateLimited } from '@/app/lib/rateLimit';
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, subject,message } = await request.json();
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0] ?? 'unknown';
+
+    if (isRateLimited(ip)) {
+        return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+    }
+    const { name, email, subject,message, website } = await request.json();
+    
+    // Honeypot tripped — pretend success so bots don't learn to skip this field
+    if (website){
+        return NextResponse.json({ success: true });
+    }
 
     if (!name || !email || !message){
         return NextResponse.json({ error: "Missing required fields" }, { status: 400 });

@@ -15,7 +15,8 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    website: ''
   });
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -65,7 +66,8 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
       name: '',
       email: '',
       subject: '',
-      message: ''
+      message: '',
+      website: ''
     });
     setSent(true);
 
@@ -206,6 +208,19 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
                     className="w-full bg-white border border-[#1A1A1A]/15 px-4 py-3 text-xs text-[#1A1A1A] focus:outline-none focus:border-primary font-mono placeholder-[#1A1A1A]/35 rounded-none"
                   />
                 </div>
+
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={(e) => setFormData(prev => ({ ...prev, website: e.target.value }))}
+                  style={{ position: 'absolute', left: '-9999px', opacity: 0 }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
+
+                
 
                 <div className="space-y-1.5">
                   <label className="font-mono text-[9px] uppercase tracking-wider text-[#1A1A1A]/50">MESSAGE BODY // REQUIRED</label>
