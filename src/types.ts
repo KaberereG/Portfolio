@@ -26,6 +26,7 @@ export interface WizardState {
   timeline: 'urgent' | 'standard' | 'flexible' | '';
   clientEmail: string;
   clientMessage: string;
+  website: string; // Honeypot field
 }
 
 export interface ContactMessage {

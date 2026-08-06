@@ -31,6 +31,16 @@ export default function Hero() {
     }
   };
 
+  const resumeDownload = () => {
+    const resumeUrl = '/Grace_Waithera_Kaberere_CV.pdf'; // Path to your resume file in the public folder
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Grace_Waithera_Kaberere_CV.pdf'; // Name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <section
       id="hub"
@@ -90,6 +100,14 @@ export default function Hero() {
         >
           Developer who builds software solutions with an emphasis on clean architecture, maintainability, and best practices — from backend systems to the interfaces people actually use.
         </motion.p>
+        <motion.div variants={itemVariants} className="space-y-4">
+          <button
+            onClick={() => {resumeDownload()}}
+            className="w-full text-center font-mono text-sm uppercase tracking-[0.25em] text-white bg-primary p-4 font-bold active:scale-95 transition-transform cursor-pointer hover:bg-[#1A1A1A]"
+          >
+            Read CV
+          </button>
+        </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div

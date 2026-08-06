@@ -9,6 +9,16 @@ interface FooterProps {
 export default function Footer({ onConnectClick }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
+  const resumeDownload = () => {
+    const resumeUrl = '/Grace_Waithera_Kaberere_CV.pdf'; // Path to your resume file in the public folder
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Grace_Waithera_Kaberere_CV.pdf'; // Name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <footer className="w-full border-t border-[#1A1A1A]/10 bg-transparent py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-10">
@@ -45,7 +55,7 @@ export default function Footer({ onConnectClick }: FooterProps) {
               LinkedIn
             </a>
             <button
-              onClick={onConnectClick}
+              onClick={resumeDownload}
               className="text-[#1A1A1A]/60 hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0 uppercase"
             >
               Read.cv

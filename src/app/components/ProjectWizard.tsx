@@ -13,9 +13,12 @@ export default function ProjectWizard() {
     designStyle: '',
     timeline: '',
     clientEmail: '',
-    clientMessage: ''
+    clientMessage: '',
+    website: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSelect = (key: keyof WizardState, value: string) => {
     setConfig(prev => ({ ...prev, [key]: value }));
@@ -49,20 +52,40 @@ export default function ProjectWizard() {
     return { arch, database, devops, estimate };
   };
 
-  const submitInquiry = (e: React.FormEvent) => {
+  const submitInquiry = async(e: React.FormEvent) => {
     e.preventDefault();
     if (!config.clientEmail) return;
+    setSending(true);
+    try {
+      const blueprint = getSystemBlueprint(); 
+      const res = await fetch('/api/projectinfo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ ...config, blueprint })
+      });
 
-    // Simulate inquiry submission to localStorage
-    const savedInquiries = JSON.parse(localStorage.getItem('gk_inquiries') || '[]');
-    savedInquiries.push({
-      ...config,
-      blueprint: getSystemBlueprint(),
-      timestamp: new Date().toISOString()
-    });
-    localStorage.setItem('gk_inquiries', JSON.stringify(savedInquiries));
+      if (!res.ok) {
+        throw new Error('Failed to send message');
+      }
+      // Simulate inquiry submission to localStorage
+      const savedInquiries = JSON.parse(localStorage.getItem('gk_inquiries') || '[]');
+      savedInquiries.push({
+        ...config,
+        blueprint: getSystemBlueprint(),
+        timestamp: new Date().toISOString()
+      });
+
+      localStorage.setItem('gk_inquiries', JSON.stringify(savedInquiries));
 
     setSubmitted(true);
+  } catch (error) {
+    console.error('Error submitting inquiry:', error);
+    setError('Failed to send message. Please try again later.');
+  }finally{
+    setSending(false);
+  }
   };
 
   const resetWizard = () => {
@@ -72,7 +95,8 @@ export default function ProjectWizard() {
       designStyle: '',
       timeline: '',
       clientEmail: '',
-      clientMessage: ''
+      clientMessage: '',
+      website: ''
     });
     setStep(1);
     setSubmitted(false);
