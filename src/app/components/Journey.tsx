@@ -28,7 +28,7 @@ export default function Journey() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-24">
-          <h2 className="font-syne text-4xl md:text-5xl font-extrabold text-[#1A1A1A] mb-4 uppercase tracking-tight">
+          <h2 className="font-syne text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-4 uppercase tracking-tight">
             The Journey
           </h2>
           <div className="w-16 h-1 bg-primary mx-auto" />

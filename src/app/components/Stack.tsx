@@ -13,7 +13,7 @@ export default function Stack() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div className="space-y-3">
-            <h2 className="font-syne text-4xl md:text-5xl font-extrabold uppercase text-[#1A1A1A] tracking-tight">
+            <h2 className="font-syne text-4xl md:text-5xl font-bold uppercase text-[#1A1A1A] tracking-tight">
               The Stack
             </h2>
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary font-semibold">

@@ -121,7 +121,7 @@ export default function ProjectWizard() {
               exit={{ opacity: 0, y: -20 }}
               className="space-y-8 py-12"
             >
-              <h2 className="font-syne text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1A1A1A] tracking-tight">
+              <h2 className="font-syne text-3xl sm:text-4xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight">
                 Ready to build something <span className="font-display italic font-normal text-primary">lasting?</span>
               </h2>
               <p className="font-sans text-[#1A1A1A]/60 text-sm md:text-base max-w-md mx-auto font-light leading-relaxed">

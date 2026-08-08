@@ -65,7 +65,7 @@ export default function Hero() {
         className="relative z-10 space-y-8 max-w-5xl w-full flex flex-col items-center"
       >
         {/* Availability Capsule */}
-        <motion.div
+        {/* <motion.div
           variants={itemVariants}
           className="inline-flex items-center gap-2 py-1.5 px-4 border border-primary/25 rounded-full bg-primary/5 hover:border-primary/40 transition-all"
         >
@@ -73,11 +73,11 @@ export default function Hero() {
           <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-primary font-semibold">
             Available for projects
           </span>
-        </motion.div>
+        </motion.div> */}
 
         {/* Big Headline in Playfair Display (Serif) & Syne */}
         <motion.div variants={itemVariants} className="space-y-4">
-          <h1 className="font-syne text-5xl sm:text-7xl md:text-[95px] font-extrabold tracking-tight text-[#1A1A1A] leading-[0.95] select-none uppercase">
+          <h1 className="font-syne text-5xl sm:text-7xl md:text-[95px] font-bold tracking-tight text-[#1A1A1A] leading-[0.95] select-none uppercase">
             Grace
             <br />
             <span className="font-display italic font-normal text-primary relative inline-block normal-case">
