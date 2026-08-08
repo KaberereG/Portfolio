@@ -100,14 +100,14 @@ export default function Hero() {
         >
           Developer who builds software solutions with an emphasis on clean architecture, maintainability, and best practices — from backend systems to the interfaces people actually use.
         </motion.p>
-        <motion.div variants={itemVariants} className="space-y-4">
+        {/* <motion.div variants={itemVariants} className="space-y-4">
           <button
             onClick={() => {resumeDownload()}}
             className="w-full text-center font-mono text-sm uppercase tracking-[0.25em] text-white bg-primary p-4 font-bold active:scale-95 transition-transform cursor-pointer hover:bg-[#1A1A1A]"
           >
             Read CV
           </button>
-        </motion.div>
+        </motion.div> */}
 
         {/* Scroll Indicator */}
         <motion.div

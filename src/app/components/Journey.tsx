@@ -18,13 +18,7 @@ export default function Journey() {
 
   return (
     <section id="journey" className="py-24 bg-[#F5F2ED] relative overflow-hidden border-t border-[#1A1A1A]/10">
-      {/* Decorative large backdrop background text */}
-      <div className="absolute bottom-10 right-0 transform translate-y-1/3 translate-x-1/4 select-none pointer-events-none overflow-hidden opacity-[0.05] text-right">
-        <span className="font-syne text-[140px] md:text-[220px] text-primary leading-none uppercase font-extrabold tracking-tighter">
-          Evolution
-        </span>
-      </div>
-
+     
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-24">
@@ -59,7 +53,7 @@ export default function Journey() {
                   <div className={`w-full md:w-[45%] pl-10 md:pl-0 ${isEven ? 'md:text-right' : 'md:text-left'}`}>
                     <div
                       onClick={() => toggleExpand(item.id)}
-                      className="group cursor-pointer border border-[#1A1A1A]/10 bg-white/30 p-6 md:p-8 hover:border-primary/30 hover:bg-white transition-all duration-300 relative"
+                      className="group cursor-pointer border border-[#1A1A1A]/10 bg-white/30 p-6 md:p-8 hover:border-primary/30 hover:bg-white transition-all duration-300 relative rounded-sm"
                     >
                       {/* Interactive indicator bar */}
                       <span className={`absolute top-0 bottom-0 w-[3px] bg-primary transition-transform duration-300 ${

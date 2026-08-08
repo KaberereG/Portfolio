@@ -64,10 +64,10 @@ export default function Footer({ onConnectClick }: FooterProps) {
         </div>
 
         {/* Physical Coord Indicator */}
-        <div className="flex items-center gap-2 text-[#1A1A1A]/70 border border-[#1A1A1A]/10 bg-white/40 px-4 py-2 font-mono text-[11px] uppercase tracking-wider">
+        {/* <div className="flex items-center gap-2 text-[#1A1A1A]/70 border border-[#1A1A1A]/10 bg-white/40 px-4 py-2 font-mono text-[11px] uppercase tracking-wider">
           <MapPin size={13} className="text-primary animate-pulse" />
           <span>Nairobi, Kenya</span>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

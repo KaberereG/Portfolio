@@ -12,7 +12,7 @@ export default function Projects() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
                     {/* Project items will be mapped here */}
                     {PROJECTS.map((project) => (
-                        <div onClick = {()=>{window.location.href = project.link}} key={project.id} className="group relative cursor-pointer border border-[#1A1A1A]/10 bg-white/30 p-6 md:p-8 hover:border-primary/30 hover:bg-white transition-all duration-300">
+                        <div onClick = {()=>{window.location.href = project.link}} key={project.id} className="group relative cursor-pointer border border-[#1A1A1A]/10 bg-white/30 p-6 md:p-8 hover:border-primary/30 hover:bg-white transition-all duration-300 rounded-sm">
                             <ExternalLink
                                 size={18}
                                 className="absolute top-4 right-4 text-[#1A1A1A]/40 group-hover:text-primary transition-colors"

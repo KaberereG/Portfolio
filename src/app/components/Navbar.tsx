@@ -85,7 +85,7 @@ export default function Navbar({ onConnectClick }: NavbarProps) {
 
             <button
               onClick={onConnectClick}
-              className="group font-mono text-xs uppercase tracking-[0.2em] text-white bg-primary hover:bg-[#1A1A1A] hover:text-white px-5 py-2.5 transition-all duration-300 cursor-pointer active:scale-95 flex items-center gap-1.5"
+              className="group font-mono text-xs rounded-sm uppercase tracking-[0.2em] text-white bg-primary hover:bg-[#1A1A1A] hover:text-white px-5 py-2.5 transition-all duration-300 cursor-pointer active:scale-95 flex items-center gap-1.5"
             >
               Connect
               <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

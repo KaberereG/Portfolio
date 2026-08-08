@@ -110,21 +110,20 @@ export default function Stack() {
                 </div>
 
                 {/* Mastery metrics */}
-                <div className="grid grid-cols-2 gap-4 border border-[#1A1A1A]/10 p-4 bg-white/60">
-                  <div className="space-y-1">
-                    <span className="font-mono text-[10px] uppercase text-neutral-500 block">Experience</span>
-                    <div className="flex items-baseline gap-1">
-                      <span className="font-syne text-2xl font-bold text-[#1A1A1A]">{selectedSkill.experienceYears}</span>
-                      <span className="font-mono text-xs text-neutral-500">Years</span>
-                    </div>
+                <div className="flex items-baseline justify-between border border-[#1A1A1A]/10 p-4 bg-white/60">
+                  <span className="font-mono text-[10px] uppercase text-neutral-500">
+                    Experience
+                  </span>
+
+                  <div className="flex items-baseline gap-1 pe-5">
+                    <span className="font-syne text-3xl font-bold text-[#1A1A1A]">
+                      {selectedSkill.experienceYears}
+                    </span>
+                    <span className="font-mono text-xs text-neutral-500">
+                      Years
+                    </span>
                   </div>
-                  <div className="space-y-1">
-                    <span className="font-mono text-[10px] uppercase text-neutral-500 block">Expertise Level</span>
-                    <div className="flex items-baseline gap-1">
-                      <span className="font-syne text-2xl font-bold text-primary">{selectedSkill.masteryLevel}%</span>
-                    </div>
-                  </div>
-                </div>
+                 </div>
 
                 {/* Description */}
                 <div className="space-y-2">

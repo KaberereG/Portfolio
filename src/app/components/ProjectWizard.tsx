@@ -130,7 +130,7 @@ export default function ProjectWizard() {
               <div>
                 <button
                   onClick={() => setIsActive(true)}
-                  className="font-mono text-xs uppercase tracking-[0.3em] font-extrabold text-white bg-primary hover:bg-[#1A1A1A] px-10 py-5 transition-all duration-300 cursor-pointer active:scale-95 inline-flex items-center gap-2"
+                  className="font-mono text-xs uppercase tracking-[0.3em] font-extrabold text-white bg-primary hover:bg-[#1A1A1A] px-10 py-5 transition-all duration-300 cursor-pointer active:scale-95 inline-flex items-center gap-2 rounded-sm"
                 >
                   <Play size={12} fill="currentColor" />
                   Initialize Project
@@ -151,7 +151,7 @@ export default function ProjectWizard() {
                 <div className="flex items-center gap-2.5">
                   <Terminal size={14} className="text-primary animate-pulse" />
                   <span className="font-mono text-[10px] md:text-xs uppercase tracking-widest text-[#1A1A1A]/60">
-                    System_Provisioner // Step_0{step}_of_04
+                    System_Provisioner // Step {step}
                   </span>
                 </div>
                 <button
@@ -368,7 +368,7 @@ export default function ProjectWizard() {
                         <form onSubmit={submitInquiry} className="space-y-4">
                           <div className="space-y-2">
                             <label className="font-mono text-[10px] uppercase text-[#1A1A1A]/60 tracking-wider block text-left">
-                              Inquirer Connection Email
+                              Email
                             </label>
                             <input
                               type="email"
