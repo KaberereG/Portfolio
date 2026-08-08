@@ -2,7 +2,7 @@
 
 A personal portfolio site built with Next.js, showcasing projects, skills, and a working contact form.
 
-**Live site:** [add deployed URL here]
+**Live site:** (https://portfolio-zeta-jet-abvnxfd7gr.vercel.app/)
 
 ![Portfolio preview](./public/images/preview.png)
 
