@@ -28,7 +28,7 @@ export default function Footer({ onConnectClick }: FooterProps) {
             GK
           </span>
           <span className="font-mono text-[9px] text-primary tracking-widest uppercase mt-0.5">
-            Architecture
+            Portfolio
           </span>
         </div>
 
