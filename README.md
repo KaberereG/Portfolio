@@ -25,9 +25,9 @@ A personal portfolio site built with Next.js, showcasing projects, skills, and a
 | Framework  | Next.js (App Router)            |
 | Language   | TypeScript                      |
 | Animation  | Framer Motion                   |
-| Email      | Nodemailer (SMTP)                |
-| Styling    | [add: Tailwind CSS / CSS Modules / etc.] |
-| Deployment | [add: Vercel / Netlify / etc.]  |
+| Email      | Nodemailer (SMTP)               |
+| Styling    | Tailwind CSS                    |
+| Deployment | Vercel                          |
 
 ## Getting Started
 
@@ -98,7 +98,7 @@ The contact form API route includes three layers of protection before an email i
 
 ## Deployment
 
-This project is deployed on [add platform, e.g. Vercel]. Push to `main` to trigger a new deployment, or deploy manually with:
+This project is deployed on vercel. Push to `main` to trigger a new deployment, or deploy manually with:
 
 ```bash
 [add your deploy command, e.g. vercel --prod]
