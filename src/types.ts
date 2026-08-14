@@ -37,11 +37,38 @@ export interface ContactMessage {
   timestamp: string;
 }
 
+export interface ProjectContribution {
+  title: string;
+  description: string;
+  impact?: string;
+  tags?: string[];
+}
+
+export interface ProjectScreenshot {
+  id: string;
+  title: string;
+  caption: string;
+  type: 'dashboard' | 'mobile' | 'web';
+}
+
 export interface Project {
   id: string;
-  name: string;
+  title: string;
+  subtitle: string;
+  role: string;
+  period: string;
+  company?: string;
+  location?: string;
+  category: string;
   images: string[];
-  description: string;
-  link:string;
-  technologies:string
+  summary: string;
+  fullDescription: string;
+  imageType: 'treebula' | 'shaba' | 'telemetry';
+  mockupType: 'dashboard' | 'mobile' | 'web';
+  externalUrl?: string;
+  metrics: { label: string; value: string; description?: string }[];
+  keyContributions: ProjectContribution[];
+  techStack: string[];
+  screenshots: ProjectScreenshot[];
+  challenges: { problem: string; solution: string }[];
 }

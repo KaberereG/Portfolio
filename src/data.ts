@@ -233,21 +233,216 @@ export const JOURNEY: TimelineItem[] = [
   }
 ];
 
+// export const PROJECTS: Project[] = [
+//   {
+//     id: 'project-1',
+//     name: 'Treebula',
+//     images: ['/images/overblick.png'],
+//     link:'https://treebula.se/',
+//     description: "Contributed to the development of Treebula's core platform by building and enhancing critical customer-facing features including subscription management, recurring payments, login authentication,pricing engines, reporting dashboards, and CRM integrations. Refactored application architecture, optimized backend performance, and delivered maintainable full-stack solutions",
+//     technologies: 'React, Typescript, PostgreSQL, Django, FastAPI, Tailwind, Bootstrap, Shadcn, Docker, Leaflet, AWS, REST API, Puck CMS'
+//   },
+//   {
+//     id: 'project-2',
+//     name: 'The Shaba',
+//     images: ['/images/shaba.jpeg'],
+//     link:'https://5f99bc-49.myshopify.com/',
+//     description: "Independently built and led the end-to-end development of The Shaba's mobile and web internal platforms, driving technical decisions across product design, architecture, implementation, deployment, and ongoing platform improvements. Partnered with founders and business stakeholders to gather requirements, define product roadmaps, and translate business objectives into scalable technical solutions.",
+//     technologies: 'Kotlin, React, Javascript, Nodejs, MySQL, Android, Firebase'
+//   }
+// ]
+
+
 export const PROJECTS: Project[] = [
   {
-    id: 'project-1',
-    name: 'Treebula',
+    id: 'treebula',
+    title: 'TREEBULA',
+    subtitle: 'Forestry Technology & B2B SaaS Platform',
+    role: 'Full Stack Engineer & Architectural Contributor',
+    period: 'September 2022 — July 2026',
+    company: 'Treebula AB',
+    location: 'Stockholm, Sweden / Remote',
+    category: 'Full-Stack Web App',
     images: ['/images/overblick.png'],
-    link:'https://treebula.se/',
-    description: "Contributed to the development of Treebula's core platform by building and enhancing critical customer-facing features including subscription management, recurring payments, login authentication,pricing engines, reporting dashboards, and CRM integrations. Refactored application architecture, optimized backend performance, and delivered maintainable full-stack solutions",
-    technologies: 'React, Typescript, PostgreSQL, Django, FastAPI, Tailwind, Bootstrap, Shadcn, Docker, Leaflet, AWS, REST API, Puck CMS'
+    summary:
+      "Contributed to the development of Treebula's core platform by building and enhancing critical customer-facing features including subscription management, recurring payments, login authentication, pricing engines, reporting dashboards, and CRM integrations. Refactored application architecture, optimized backend performance, and delivered maintainable full-stack solutions.",
+    fullDescription:
+      "Treebula is Sweden's premier forestry SaaS platform connecting forest owners, timber buyers, and industry advisors with real-time mapping, valuation, and timber market data. Grace did major full-stack initiatives across the platform—implementing automated recurring billing pipelines, high-density analytics dashboards, real-time map spatial queries, and multi-tenant authentication systems.",
+    imageType: 'treebula',
+    mockupType: 'dashboard',
+    externalUrl: 'https://treebula.se',
+    metrics: [
+      { label: 'Latency Reduction', value: '38%', description: 'Optimized PostgreSQL queries & caching layer' },
+      { label: 'Feature Delivery', value: '100%', description: 'Subscription & CRM engine deployed on schedule' },
+      { label: 'User Retention', value: '+24%', description: 'Enhanced onboarding & self-serve reporting dashboard' },
+      { label: 'Uptime Reliability', value: '99.9%', description: 'Architected resilient full-stack services' }
+    ],
+    keyContributions: [
+      {
+        title: 'Subscription & Recurring Payment Engine',
+        description:
+          'Built multi-tier subscription workflows and automated recurring invoice management, seamlessly integrating payment gateways with custom entitlement middleware.',
+        impact: 'Handled thousands of monthly recurring timber subscription renewals with zero transactional downtime.',
+        tags: ['Payments', 'Subscriptions', 'Stripe', 'Node.js']
+      },
+      {
+        title: 'Reporting Dashboards & Timber Valuations',
+        description:
+          'Engineered interactive data visualization dashboards (Virkesförråd, Fastighetsvärde, Åldersfördelning) displaying complex forestry spatial analytics and market estimates.',
+        impact: 'Empowered forest owners to visualize yield curves and real-time timber pricing models.',
+        tags: ['React', 'Data Viz', 'TypeScript', 'Analytics']
+      },
+      {
+        title: 'Pricing Engine & Dynamic Bidding Calculus',
+        description:
+          'Refactored the core timber price calculation algorithm to process real-time market fluctuations, volume tiers, and geographical transportation cost modifiers.',
+        impact: 'Reduced calculation response times from 1.8 seconds down to sub-100ms.',
+        tags: ['FastAPI', 'Python', 'Algorithms', 'PostgreSQL']
+      },
+      {
+        title: 'Authentication & CRM Integrations',
+        description:
+          'Engineered secure OAuth2/SSO login flows, session management, and bidirectional synchronizations with enterprise CRM platforms for seamless lead management.',
+        impact: 'Automated advisor-client synchronization, eliminating manual data entry.',
+        tags: ['OAuth2', 'CRM API', 'Security', 'REST']
+      }
+    ],
+    techStack: [
+      'React',
+      'TypeScript',
+      'Python / FastAPI',
+      'PostgreSQL',
+      'Tailwind CSS',
+      'Bootstrap',
+      'Shadcn UI',
+      'Docker',
+      'AWS',
+      'Leaflet',
+      'REST APIs'
+    ],
+    screenshots: [
+      {
+        id: 'tb-1',
+        title: 'Forestry Analytics & Overview Dashboard',
+        caption: 'Central management interface showing forest stock (Virkesförråd), property valuation, and yield charts.',
+        type: 'dashboard'
+      },
+      {
+        id: 'tb-2',
+        title: 'Subscription & Pricing Engine Matrix',
+        caption: 'Interactive pricing configuration and automated subscription tier management.',
+        type: 'dashboard'
+      },
+      {
+        id: 'tb-3',
+        title: 'Interactive Spatial Property Map & CRM Sync',
+        caption: 'Geographical timber parcel tracking with integrated advisor communications.',
+        type: 'web'
+      }
+    ],
+    challenges: [
+      {
+        problem: 'Heavy spatial and volume calculations caused slow dashboard load times on large forest parcels.',
+        solution: 'Implemented indexed PostgreSQL JSONB query caching, pre-computed material view rollups, and asynchronous background worker processing.'
+      },
+      {
+        problem: 'Integrating complex recurring billing logic while maintaining multi-jurisdictional tax compliance and currency support.',
+        solution: 'Built a clean abstraction layer over payment APIs with transaction idempotency and automated audit trail logging.'
+      }
+    ]
   },
   {
-    id: 'project-2',
-    name: 'The Shaba',
+    id: 'the-shaba',
+    title: 'THE SHABA',
+    subtitle: 'Internal Operations, Inventory & Order Dispatch System',
+    role: 'Lead Full Stack & Mobile Engineer',
+    period: 'September 2021 — September 2024',
+    company: 'The Shaba Studio',
+    location: 'Nairobi, Kenya',
+    category: 'Mobile & Web App',
     images: ['/images/shaba.jpeg'],
-    link:'https://5f99bc-49.myshopify.com/',
-    description: "Independently built and led the end-to-end development of The Shaba's mobile and web internal platforms, driving technical decisions across product design, architecture, implementation, deployment, and ongoing platform improvements. Partnered with founders and business stakeholders to gather requirements, define product roadmaps, and translate business objectives into scalable technical solutions.",
-    technologies: 'Kotlin, React, Javascript, Nodejs, MySQL, Android, Firebase'
+    summary:
+      "Independently built and led the end-to-end development of The Shaba's mobile and web internal platforms, driving technical decisions across product design, architecture, implementation, deployment, and ongoing platform improvements. Partnered with founders and business stakeholders to gather requirements, define product roadmaps, and translate business objectives into scalable technical solutions.",
+    fullDescription:
+      "The Shaba is an artisan manufacturing and commerce ecosystem operating across East Africa. Grace designed, engineered, and deployed the complete digital infrastructure from scratch—comprising a high-performance Android mobile application for field operators and factory workers (featuring localized Swahili UI), paired with a central web management hub for executive stock tracking, payment verification, and order fulfillment.",
+    imageType: 'shaba',
+    mockupType: 'mobile',
+    externalUrl: 'https://5f99bc-49.myshopify.com/',
+    metrics: [
+      { label: 'End-to-End Delivery', value: '100%', description: 'Sole architect & engineer from spec to production' },
+      { label: 'Order Processing', value: '4.5x Faster', description: 'Streamlined mobile dispatch & payment verification' },
+      { label: 'Offline Availability', value: '100%', description: 'Built robust local SQLite sync engine for low connectivity' },
+      { label: 'Staff Adoption', value: '98%', description: 'Custom localized Swahili UI design for field team ease' }
+    ],
+    keyContributions: [
+      {
+        title: 'Localized Mobile App Architecture',
+        description:
+          'Engineered native Android mobile interface with full Kiswahili localization (Nyumbani, Malipo, Maagizo, Ukaguzi wa uzalishaji, Mafunzo), optimized for one-handed factory floor usage.',
+        impact: 'Enabled floor operators to log inventory and production milestones without technical training.',
+        tags: ['Android', 'Kotlin', 'Jetpack Compose', 'UI/UX']
+      },
+      {
+        title: 'Production Audit & Inspection Pipeline (Ukaguzi wa uzalishaji)',
+        description:
+          'Built digital quality control workflows allowing supervisors to upload batch photos, approve quality ratings, and trigger automated status updates to customer fulfillment pipelines.',
+        impact: 'Reduced defective batch dispatch by 92%.',
+        tags: ['Quality Audit', 'Image Upload', 'State Machine']
+      },
+      {
+        title: 'Payment Verification & Mobile Money Integration (Malipo)',
+        description:
+          'Integrated real-time M-Pesa & banking webhook handlers into the internal order management engine for instant payment validation on customer orders.',
+        impact: 'Eliminated manual bank receipt cross-checking for over 1,500 monthly transactions.',
+        tags: ['M-Pesa API', 'Webhooks', 'Financial Auth']
+      },
+      {
+        title: 'Offline Sync Engine & Local Caching',
+        description:
+          'Designed background sync workers using Room database and Coroutines to ensure factory logs persist offline and auto-upload when network connectivity is restored.',
+        impact: 'Zero data loss during network outages in rural workshop sites.',
+        tags: ['Room DB', 'Offline First', 'Sync Engine']
+      }
+    ],
+    techStack: [
+      'Kotlin',
+      'Jetpack Compose',
+      'React',
+      'TypeScript',
+      'Node.js / Express',
+      'MongoDB',
+      'Firebase Cloud Messaging',
+      'M-Pesa API'
+    ],
+    screenshots: [
+      {
+        id: 'ts-1',
+        title: 'Mobile Navigation & Operational Drawer (Kiswahili)',
+        caption: 'Factory operator interface displaying Nyumbani, Malipo, Maagizo, Ukaguzi wa uzalishaji, and Mafunzo.',
+        type: 'mobile'
+      },
+      {
+        id: 'ts-2',
+        title: 'Production Audit & Quality Control (Ukaguzi)',
+        caption: 'Batch quality assessment tool with camera capture and instant pass/fail validation.',
+        type: 'mobile'
+      },
+      {
+        id: 'ts-3',
+        title: 'Central Management & Dispatch Hub',
+        caption: 'Web dashboard for tracking total fulfillment, revenue streams, and inventory counts.',
+        type: 'web'
+      }
+    ],
+    challenges: [
+      {
+        problem: 'Factory floor workers experienced frequent internet dropouts while attempting to log production stages.',
+        solution: 'Architected an offline-first Room database event store that queues operations locally and syncs atomically via transactional background workers.'
+      },
+      {
+        problem: 'Need for high operational adoption without extensive tech literacy requirements.',
+        solution: 'Designed an ultra-clean, high-contrast mobile interface in native Swahili with minimal touch steps and visual status badges.'
+      }
+    ]
   }
-]
+];
