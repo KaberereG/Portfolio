@@ -163,7 +163,7 @@ export const SKILLS: Skill[] = [
     name: 'Bootstrap',
     category: 'Styling',
     masteryLevel: 98,
-    experienceYears: 2,
+    experienceYears: 4,
     description: 'Professional experience building responsive, modern user interfaces using Bootstrap with a focus on reusable styling and maintainable design systems.',
     highlights: [
       'Built responsive layouts.',
