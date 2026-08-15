@@ -68,7 +68,7 @@ export default function ProjectDetailModal({
                   rel="noreferrer"
                   className="font-mono text-xs uppercase tracking-wider text-primary border border-primary/30 hover:bg-primary hover:text-white px-3 py-1.5 transition-all flex items-center gap-1.5"
                 >
-                  <span>Live Site</span>
+                  <span>Company Site</span>
                   <ExternalLink size={12} />
                 </a>
               )}
@@ -122,14 +122,14 @@ export default function ProjectDetailModal({
               <div className="lg:col-span-5 space-y-3">
                 <div className="border border-[#1A1A1A]/15 bg-white/50 p-2 shadow-sm rounded-xs">
                   <div className="relative cursor-pointer w-full h-64 ">
-                                          <Image
-                                              src={project.images[0]}
-                                              alt={project.title}
-                                              fill
-                                              className="object-contain"
-                                              sizes="(max-width: 768px) 100vw, 400px"
-                                          />
-                                      </div>
+                    <Image
+                      src={project.images[1] || project.images[0]}
+                      alt={project.title}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                    />
+                  </div>
                 </div>
                 <p className="font-mono text-[10px] text-[#1A1A1A]/60 italic text-center">
                   Live UI Mockup • {project.screenshots[selectedScreenshotIdx]?.title || project.title}
@@ -261,7 +261,7 @@ export default function ProjectDetailModal({
                     </div>
                   </div>
 
-                  <div className="border-t border-[#1A1A1A]/10 pt-6 space-y-4">
+                  {/* <div className="border-t border-[#1A1A1A]/10 pt-6 space-y-4">
                     <h5 className="font-mono text-xs uppercase tracking-wider text-[#1A1A1A]/60 font-bold">
                       ARCHITECTURAL BLUEPRINT SUMMARY
                     </h5>
@@ -275,7 +275,7 @@ export default function ProjectDetailModal({
                         <p className="text-[#1A1A1A] font-medium">React 18, TypeScript, Tailwind CSS, Concurrent rendering</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               )}
 
@@ -331,7 +331,7 @@ export default function ProjectDetailModal({
                 className="font-mono text-xs uppercase tracking-[0.25em] text-white bg-primary hover:bg-white hover:text-[#1A1A1A] px-8 py-4 font-bold transition-all duration-300 cursor-pointer active:scale-95 flex items-center gap-2 whitespace-nowrap"
               >
                 <Send size={13} />
-                Initialize Project Connection
+                Connect with me
               </button>
             </div>
           </div>

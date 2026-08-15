@@ -49,7 +49,7 @@ export const SKILLS: Skill[] = [
       'Developed reusable utility functions.'
     ]
   },
-    
+
   {
     id: 'python',
     number: '04',
@@ -187,7 +187,7 @@ export const SKILLS: Skill[] = [
       'Implemented accessible interfaces.'
     ]
   },
-  
+
 ];
 
 export const JOURNEY: TimelineItem[] = [
@@ -215,8 +215,8 @@ export const JOURNEY: TimelineItem[] = [
       'Partnered with founders and business stakeholders to gather requirements, define product roadmaps, and translate business objectives into scalable technical solutions.',
       'Designed and implemented core platform functionality across Android, web, backend services, and database layers, enabling artisans to manage profiles, market products, engage with customers, and process orders efficiently.'
     ],
-    technologies: [ 'Kotlin', 'React', 'Javascript', 'Nodejs', 'MySQL', 'Android', 'Firebase', 'Jira', 'Agile Processes'
-]
+    technologies: ['Kotlin', 'React', 'Javascript', 'Nodejs', 'MySQL', 'Android', 'Firebase', 'Jira', 'Agile Processes'
+    ]
   },
   {
     id: 'role-3',
@@ -229,7 +229,7 @@ export const JOURNEY: TimelineItem[] = [
       'Took the lead on API integration strategy for the mobile team: designed and built reusable Java libraries on top of Retrofit/OkHttp for all backend communication, cutting duplicate networking code and speeding up feature delivery across the Masterclass client projects.',
       'Worked closely with backend engineers and stakeholders to define, review, and design REST APIs contracts, ensuring scalability, backward compatibility, and seamless integration between mobile and backend platforms.'
     ],
-    technologies: [ 'Java', 'Android SDK', 'Room', 'Retrofit', 'OkHttp', 'Rest APIs', 'Material Design', 'Android Architecture Components', 'MVVM']
+    technologies: ['Java', 'Android SDK', 'Room', 'Retrofit', 'OkHttp', 'Rest APIs', 'Material Design', 'Android Architecture Components', 'MVVM']
   }
 ];
 
@@ -263,7 +263,7 @@ export const PROJECTS: Project[] = [
     company: 'Treebula AB',
     location: 'Stockholm, Sweden / Remote',
     category: 'Full-Stack Web App',
-    images: ['/images/overblick.png'],
+    images: ['/images/overblick.png', '/images/login.png'],
     summary:
       "Contributed to the development of Treebula's core platform by building and enhancing critical customer-facing features including subscription management, recurring payments, login authentication, pricing engines, reporting dashboards, and CRM integrations. Refactored application architecture, optimized backend performance, and delivered maintainable full-stack solutions.",
     fullDescription:
@@ -272,40 +272,69 @@ export const PROJECTS: Project[] = [
     mockupType: 'dashboard',
     externalUrl: 'https://treebula.se',
     metrics: [
-      { label: 'Latency Reduction', value: '38%', description: 'Optimized PostgreSQL queries & caching layer' },
-      { label: 'Feature Delivery', value: '100%', description: 'Subscription & CRM engine deployed on schedule' },
-      { label: 'User Retention', value: '+24%', description: 'Enhanced onboarding & self-serve reporting dashboard' },
-      { label: 'Uptime Reliability', value: '99.9%', description: 'Architected resilient full-stack services' }
+      { label: 'Codebase Impact', value: '1,000+', description: 'Commits across large-scale frontend and backend modernization' },
+      { label: 'Features Shipped', value: '30+', description: 'Major systems delivered: payments, auth, CMS, auctions, GDPR' },
+      { label: 'Platform Migration', value: 'Django → FastAPI', description: 'Async migration of core map & property services' },
+      { label: 'Container Consolidation', value: '2 → 1', description: 'Simplified Docker deployment architecture' },
     ],
     keyContributions: [
       {
         title: 'Subscription & Recurring Payment Engine',
         description:
-          'Built multi-tier subscription workflows and automated recurring invoice management, seamlessly integrating payment gateways with custom entitlement middleware.',
-        impact: 'Handled thousands of monthly recurring timber subscription renewals with zero transactional downtime.',
-        tags: ['Payments', 'Subscriptions', 'Stripe', 'Node.js']
+          'Built Treebula Plus yearly auto-renewal system integrating Klarna/Kustom recurring billing — token lifecycle management, scheduled renewal charges, cancellation flows, and race-condition-safe expiry handling, backed by a rewritten React checkout architecture.',
+        impact:
+          'Replaced manual re-checkout with hands-off annual renewals, synced billing/CRM data via automated HubSpot deal creation, and eliminated a class of pricing and duplicate-billing bugs across checkout flows.',
+        tags: ['Payments', 'Subscriptions', 'Klarna/Kustom', 'React', 'Django', 'HubSpot API'],
       },
       {
-        title: 'Reporting Dashboards & Timber Valuations',
+        title: 'Digital Forest Report (DFR) Platform & Access Management',
         description:
-          'Engineered interactive data visualization dashboards (Virkesförråd, Fastighetsvärde, Åldersfördelning) displaying complex forestry spatial analytics and market estimates.',
-        impact: 'Empowered forest owners to visualize yield curves and real-time timber pricing models.',
-        tags: ['React', 'Data Viz', 'TypeScript', 'Analytics']
+          'Contributed to major DFR/Plus platform releases and built ongoing maintenance systems: automated daily expiry updates for DFR access, weekly email subscription management (backend + frontend settings), and pricing consistency fixes tied to live subscription state.',
+        impact:
+          'Kept Plus/DFR access accurate as subscriptions changed, gave forest owners control over their communication preferences, and eliminated stale cached pricing in the portal — improving trust in displayed prices.',
+        tags: ['Django', 'React', 'Subscriptions', 'Automation', 'DFR/Plus'],
       },
       {
-        title: 'Pricing Engine & Dynamic Bidding Calculus',
+        title: 'Map Service & Property Generation Pipeline',
         description:
-          'Refactored the core timber price calculation algorithm to process real-time market fluctuations, volume tiers, and geographical transportation cost modifiers.',
-        impact: 'Reduced calculation response times from 1.8 seconds down to sub-100ms.',
-        tags: ['FastAPI', 'Python', 'Algorithms', 'PostgreSQL']
+          'Led migration to direct map-service integration for forest-property generation (FastAPI), moving property generation polling and worker logic out of Django to run entirely within the map service. Replaced intermediate loading patterns with a queue-based generation flow, fixed worker status polling for SBP regeneration, and hardened upstream data handling against malformed JSON responses.',
+        impact:
+          'Eliminated "stuck loading" states during property generation, reduced redundant map API traffic through border-fetch optimizations, and prevented downstream crashes from malformed upstream data — with a simpler, single-service architecture for generation and polling.',
+        tags: ['Python', 'FastAPI', 'QGIS', 'Async', 'Queue Processing', 'API Optimization'],
       },
       {
-        title: 'Authentication & CRM Integrations',
+        title: 'Authentication & Account Security (BankID)',
         description:
-          'Engineered secure OAuth2/SSO login flows, session management, and bidirectional synchronizations with enterprise CRM platforms for seamless lead management.',
-        impact: 'Automated advisor-client synchronization, eliminating manual data entry.',
-        tags: ['OAuth2', 'CRM API', 'Security', 'REST']
-      }
+          'Delivered BankID-based login for Swedish identity verification — magic-link authentication, verification codes, QR-code login, personal-number validation, and mobile/SMS login paths. Added brute-force protection on magic-link/verify-code flows with attempt limits and IP+email tracking.',
+        impact:
+          'Enabled modern, compliant Swedish identity-based login, reducing password friction and login-endpoint abuse. Redesigned login UX (layout, imagery converted to WebP) improved first impressions and page-load speed.',
+        tags: ['BankID', 'Authentication', 'Security', 'React', 'Django'],
+      },
+      {
+        title: 'Account Management, GDPR & CRM Integration',
+        description:
+          'Built self-service user settings with subscription details and HubSpot API integration, cancellation/end-subscription flows, and GDPR-compliant data-deletion workflows. Extended HubSpot integration with a custom Bid object, subscription sync, and tier-based CRM automation (CO2 deals for Plus users).',
+        impact:
+          'Reduced support load for account/subscription questions, gave users a clear offboarding path, and gave sales/support teams accurate subscription status without manual lookups.',
+        tags: ['Django', 'React', 'HubSpot API', 'GDPR', 'BankID'],
+      },
+
+      {
+        title: 'Frontend Platform & Design System Modernization',
+        description:
+          'Led large-scale frontend modernization (1,000+ commits) of the component library: Puck CMS editor fixes, standardized UI components (Popover, file-upload), and Figma-aligned navbar/mobile layouts. Fixed analytics event tracking (duplicate page views, funnel attribution) and shipped performance work — WebP migration, conditional Leaflet loading, and legacy code removal.',
+        impact:
+          'Delivered a consistent UI across marketing and product surfaces, faster page loads, more accurate product/marketing analytics, and lower long-term maintenance burden.',
+        tags: ['React', 'Design System', 'Performance', 'Analytics', 'Puck CMS'],
+      },
+      {
+        title: 'Multi-Market CMS & Forest Data Platform',
+        description:
+          'Built a dynamic CMS navigation system (models, middleware, CRUD endpoints) enabling deploy-free site changes via Puck CMS, plus multi-domain support for a Norway market expansion. Delivered SBP/forest-plan tooling (settings panel, area corrections, prop-borders API) and child-account permissions for family/organizational ownership, alongside production hardening (uWSGI migration, error logging).',
+        impact:
+          'Gave content teams independent control over navigation, laid the foundation for multi-country expansion, improved forest-inventory accuracy, and made the platform more production-ready and easier to diagnose in incidents.',
+        tags: ['Django', 'Puck CMS', 'Multi-tenant', 'GIS', 'Infrastructure'],
+      },
     ],
     techStack: [
       'React',
@@ -318,13 +347,17 @@ export const PROJECTS: Project[] = [
       'Docker',
       'AWS',
       'Leaflet',
-      'REST APIs'
+      'REST APIs',
+      'Puck CMS',
+      'HubSpot API',
+      'BankID',
+      'QGIS'
     ],
     screenshots: [
       {
         id: 'tb-1',
-        title: 'Forestry Analytics & Overview Dashboard',
-        caption: 'Central management interface showing forest stock (Virkesförråd), property valuation, and yield charts.',
+        title: 'Login page',
+        caption: 'Login page with BankID, magic-link, and verification-code authentication flows.',
         type: 'dashboard'
       },
       {
@@ -342,13 +375,29 @@ export const PROJECTS: Project[] = [
     ],
     challenges: [
       {
-        problem: 'Heavy spatial and volume calculations caused slow dashboard load times on large forest parcels.',
-        solution: 'Implemented indexed PostgreSQL JSONB query caching, pre-computed material view rollups, and asynchronous background worker processing.'
+    problem: 'Django→FastAPI migration risked breaking existing synchronous ORM-dependent code paths mid-transition.',
+        solution: 'Used asyncio.to_thread to offload sync-heavy GIS/raster operations into async endpoints, and leveraged FastAPI\'s lifespan context to initialize Django alongside FastAPI — enabling incremental migration without a full rewrite.',
       },
-      {
-        problem: 'Integrating complex recurring billing logic while maintaining multi-jurisdictional tax compliance and currency support.',
-        solution: 'Built a clean abstraction layer over payment APIs with transaction idempotency and automated audit trail logging.'
-      }
+     {
+  problem: 'Race conditions between DFR (Digital Forest Report) expiry jobs and renewal charges risked users losing access despite active subscriptions, or being billed after cancellation.',
+  solution: 'Fixed timing/ordering logic between expiry jobs and renewal scheduling, backed by end-to-end tests to catch issues before they reached production.',
+},
+{
+  problem: 'Two separate Docker containers created deployment complexity and process-management overhead.',
+  solution: 'Consolidated into a single container using a custom entrypoint script with coordinated process supervision, simplifying deployment while preserving each service\'s independent lifecycle.',
+},
+{
+    problem: 'Magic-link and verify-code login flows were vulnerable to brute-force abuse and SMS/email spam.',
+    solution: 'Added attempt limits with IP+email tracking and lockout after repeated failures, closing the abuse vector without degrading legitimate login UX.',
+  },
+  {
+    problem: 'Property generation showed "stuck loading" states because polling and worker status logic were split across Django and the map service.',
+    solution: 'Migrated property-generation polling and workers to run entirely within the map service (FastAPI), replacing intermediate loading patterns with a queue-based generation flow.',
+  },
+  {
+    problem: 'Displayed prices in the forest-owner portal sometimes reflected outdated cached values instead of current subscription state.',
+    solution: 'Fixed pricing logic to read from live subscription state across checkout and property flows, aligning FetchPropertyData, forest-land pricing, and multi-property discounts.',
+  },
     ]
   },
   {
@@ -360,7 +409,7 @@ export const PROJECTS: Project[] = [
     company: 'The Shaba Studio',
     location: 'Nairobi, Kenya',
     category: 'Mobile & Web App',
-    images: ['/images/shaba.jpeg'],
+    images: ['/images/shaba.jpeg', '/images/shaba-dashboard.png'],
     summary:
       "Independently built and led the end-to-end development of The Shaba's mobile and web internal platforms, driving technical decisions across product design, architecture, implementation, deployment, and ongoing platform improvements. Partnered with founders and business stakeholders to gather requirements, define product roadmaps, and translate business objectives into scalable technical solutions.",
     fullDescription:
@@ -390,11 +439,11 @@ export const PROJECTS: Project[] = [
         tags: ['Quality Audit', 'Image Upload', 'State Machine']
       },
       {
-        title: 'Payment Verification & Mobile Money Integration (Malipo)',
+        title: 'Order processing & Mpesa payment',
         description:
-          'Integrated real-time M-Pesa & banking webhook handlers into the internal order management engine for instant payment validation on customer orders.',
-        impact: 'Eliminated manual bank receipt cross-checking for over 1,500 monthly transactions.',
-        tags: ['M-Pesa API', 'Webhooks', 'Financial Auth']
+          'Allowed internal operators to create direct order dispatches to the artisans, and verify payments by M-pesa to the artisan accounts.',
+        impact: 'Eliminated calling artisans for order confirmations or payment verifications.',
+        tags: [ 'Webhooks', 'Financial Auth']
       },
       {
         title: 'Offline Sync Engine & Local Caching',
@@ -408,31 +457,30 @@ export const PROJECTS: Project[] = [
       'Kotlin',
       'Jetpack Compose',
       'React',
-      'TypeScript',
       'Node.js / Express',
       'MongoDB',
       'Firebase Cloud Messaging',
-      'M-Pesa API'
     ],
     screenshots: [
       {
         id: 'ts-1',
+        title: 'Central Management & Dispatch Hub',
+        caption: 'Web dashboard for tracking total fulfillment, revenue streams, and inventory counts.',
+        type: 'web'
+      },
+      {
+        id: 'ts-2',
         title: 'Mobile Navigation & Operational Drawer (Kiswahili)',
         caption: 'Factory operator interface displaying Nyumbani, Malipo, Maagizo, Ukaguzi wa uzalishaji, and Mafunzo.',
         type: 'mobile'
       },
       {
-        id: 'ts-2',
+        id: 'ts-3',
         title: 'Production Audit & Quality Control (Ukaguzi)',
         caption: 'Batch quality assessment tool with camera capture and instant pass/fail validation.',
         type: 'mobile'
       },
-      {
-        id: 'ts-3',
-        title: 'Central Management & Dispatch Hub',
-        caption: 'Web dashboard for tracking total fulfillment, revenue streams, and inventory counts.',
-        type: 'web'
-      }
+      
     ],
     challenges: [
       {
