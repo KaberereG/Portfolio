@@ -168,7 +168,7 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
               <div className="space-y-1">
                 <span className="font-mono text-[10px] text-primary uppercase tracking-widest">Channel_GK_01</span>
                 <h3 className="font-syne text-xl md:text-2xl font-bold uppercase tracking-tight text-[#1A1A1A]">
-                  Dispatch Message
+                  Send Message
                 </h3>
               </div>
 
