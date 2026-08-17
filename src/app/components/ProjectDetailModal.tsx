@@ -132,7 +132,7 @@ export default function ProjectDetailModal({
                   </div>
                 </div>
                 <p className="font-mono text-[10px] text-[#1A1A1A]/60 italic text-center">
-                  Live UI Mockup • {project.screenshots[selectedScreenshotIdx]?.title || project.title}
+                   {project.screenshots[selectedScreenshotIdx]?.title || project.title}
                 </p>
               </div>
             </div>
@@ -220,7 +220,7 @@ export default function ProjectDetailModal({
                           </div>
                         )}
 
-                        {contrib.tags && (
+                        {/* {contrib.tags && (
                           <div className="flex flex-wrap gap-1.5 pt-2">
                             {contrib.tags.map((tag, tIdx) => (
                               <span
@@ -231,7 +231,7 @@ export default function ProjectDetailModal({
                               </span>
                             ))}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     ))}
                   </div>

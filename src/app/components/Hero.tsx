@@ -51,7 +51,7 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[650px] h-[350px] md:h-[650px] bg-primary/4 rounded-full blur-[100px] md:blur-[180px] pointer-events-none animate-pulse" style={{ animationDuration: '8s' }} />
 
       {/* Architect-style grid pattern backdrop */}
-      <div className="absolute inset-0 opacity-40 pointer-events-none" 
+      <div className="absolute inset-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage: 'linear-gradient(to right, rgba(26,26,26,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(26,26,26,0.05) 1px, transparent 1px)',
           backgroundSize: '40px 40px'
@@ -85,7 +85,7 @@ export default function Hero() {
               <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-primary/40" />
             </span>
           </h1>
-          
+
           <p className="font-mono text-xs md:text-sm text-[#1A1A1A]/60 tracking-[0.3em] uppercase font-semibold flex items-center justify-center gap-2 pt-2">
             <Sparkles size={14} className="text-primary animate-pulse" />
             Full Stack Developer
@@ -116,17 +116,33 @@ export default function Hero() {
         >
           <button
             onClick={scrollToProjects}
-            className="inline-flex flex-col items-center gap-3 group cursor-pointer"
+            className="group inline-flex items-center gap-3
+    font-mono text-sm font-medium uppercase tracking-[0.18em]
+    text-white bg-primary
+    px-7 py-4
+    rounded-sm
+    shadow-lg shadow-primary/20
+    hover:bg-[#1A1A1A]
+    hover:shadow-xl hover:shadow-black/10
+    transition-all duration-300
+    cursor-pointer
+    active:scale-95"
           >
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#1A1A1A]/40 group-hover:text-primary transition-colors">
-              Explore Capabilities
-            </span>
+            <span>View Featured Projects</span>
+
             <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
-              className="p-2 border border-[#1A1A1A]/10 rounded-full group-hover:border-primary group-hover:bg-primary/5 transition-colors"
+              animate={{ y: [0, 4, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 1.4,
+                ease: "easeInOut",
+              }}
             >
-              <ChevronDown size={16} className="text-primary" />
+              <ChevronDown
+                size={18}
+                strokeWidth={2}
+                className="group-hover:translate-y-0.5 transition-transform"
+              />
             </motion.div>
           </button>
         </motion.div>
