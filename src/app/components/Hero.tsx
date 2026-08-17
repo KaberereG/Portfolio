@@ -98,7 +98,7 @@ export default function Hero() {
           variants={itemVariants}
           className="font-sans text-[#1A1A1A]/70 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed font-light"
         >
-          Developer who builds software solutions with an emphasis on clean architecture, maintainability, and best practices — from backend systems to the interfaces people actually use.
+          Software developer focused on building reliable, maintainable solutions using clean architecture and engineering best practices—from robust backend systems to intuitive user interfaces
         </motion.p>
         {/* <motion.div variants={itemVariants} className="space-y-4">
           <button
