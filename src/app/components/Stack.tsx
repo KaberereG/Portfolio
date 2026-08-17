@@ -110,7 +110,7 @@ export default function Stack() {
                 </div>
 
                 {/* Mastery metrics */}
-                <div className="flex items-baseline justify-between border border-[#1A1A1A]/10 p-4 bg-white/60">
+                {/* <div className="flex items-baseline justify-between border border-[#1A1A1A]/10 p-4 bg-white/60">
                   <span className="font-mono text-[10px] uppercase text-neutral-500">
                     Experience
                   </span>
@@ -123,7 +123,7 @@ export default function Stack() {
                       Years
                     </span>
                   </div>
-                 </div>
+                 </div> */}
 
                 {/* Description */}
                 <div className="space-y-2">
