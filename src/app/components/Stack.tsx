@@ -104,7 +104,7 @@ export default function Stack() {
                     <span className="font-mono text-xs text-primary">{selectedSkill.category}</span>
                     <span className="font-mono text-[10px] text-neutral-500">ID: {selectedSkill.id.toUpperCase()}_{selectedSkill.number}</span>
                   </div>
-                  <h3 className="font-syne text-3xl font-extrabold uppercase text-[#1A1A1A] tracking-tight">
+                  <h3 className="font-syne text-3xl font-bold uppercase text-[#1A1A1A] tracking-tight">
                     {selectedSkill.name}
                   </h3>
                 </div>

@@ -130,7 +130,7 @@ export default function ProjectWizard() {
               <div>
                 <button
                   onClick={() => setIsActive(true)}
-                  className="font-mono text-xs uppercase tracking-[0.3em] font-extrabold text-white bg-primary hover:bg-[#1A1A1A] px-10 py-5 transition-all duration-300 cursor-pointer active:scale-95 inline-flex items-center gap-2 rounded-sm"
+                  className="font-mono text-xs uppercase tracking-[0.3em] font-bold text-white bg-primary hover:bg-[#1A1A1A] px-10 py-5 transition-all duration-300 cursor-pointer active:scale-95 inline-flex items-center gap-2 rounded-sm"
                 >
                   <Play size={12} fill="currentColor" />
                   Initialize Project

@@ -92,7 +92,7 @@ export default function ProjectDetailModal({
                   <span className="font-mono text-xs text-primary font-bold uppercase tracking-widest block">
                     {project.subtitle}
                   </span>
-                  <h1 className="font-syne text-4xl sm:text-5xl font-extrabold tracking-tight text-[#1A1A1A]">
+                  <h1 className="font-syne text-4xl md:text-5xl font-bold tracking-tight text-[#1A1A1A]">
                     {project.title}
                   </h1>
                 </div>
@@ -148,7 +148,7 @@ export default function ProjectDetailModal({
                     key={idx}
                     className="p-5 bg-white/70 border border-[#1A1A1A]/10 space-y-1 relative overflow-hidden group hover:border-primary/40 transition-colors"
                   >
-                    <span className="font-syne text-2xl sm:text-3xl font-extrabold text-primary">
+                    <span className="font-syne text-xl md:text-2xl font-bold text-primary">
                       {metric.value}
                     </span>
                     <h4 className="font-mono text-xs uppercase tracking-wider text-[#1A1A1A] font-bold">

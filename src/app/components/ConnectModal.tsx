@@ -105,7 +105,7 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
             <div className="col-span-1 md:col-span-5 border-b md:border-b-0 md:border-r border-[#1A1A1A]/10 p-8 flex flex-col justify-between space-y-12 bg-[#E2DED6]/20">
               <div className="space-y-6">
                 <div className="space-y-1">
-                  <h3 className="font-syne text-2xl font-extrabold uppercase tracking-tight text-[#1A1A1A]">
+                  <h3 className="font-syne text-2xl font-bold uppercase tracking-tight text-[#1A1A1A]">
                     Connect with me
                   </h3>
                 </div>
@@ -237,7 +237,7 @@ export default function ConnectModal({ isOpen, onClose }: ConnectModalProps) {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full font-mono text-xs uppercase tracking-[0.25em] bg-[#1A1A1A] text-white font-extrabold py-4 hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer active:scale-95 flex items-center justify-center gap-2"
+                    className="w-full font-mono text-xs uppercase tracking-[0.25em] bg-[#1A1A1A] text-white font-bold py-4 hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer active:scale-95 flex items-center justify-center gap-2"
                   >
                     <Send size={12} />
                     Send Message
