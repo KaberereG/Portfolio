@@ -9,14 +9,8 @@ interface FooterProps {
 export default function Footer({ onConnectClick }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
-  const resumeDownload = () => {
-    const resumeUrl = '/Grace_Waithera_Kaberere_CV.pdf'; // Path to your resume file in the public folder
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Grace_Waithera_Kaberere_CV.pdf'; // Name for the downloaded file
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const readCV = () => {
+    window.open('/Grace_Waithera_Kaberere_CV.pdf', '_blank');
   }
 
   return (
@@ -55,10 +49,10 @@ export default function Footer({ onConnectClick }: FooterProps) {
               LinkedIn
             </a>
             <button
-              onClick={resumeDownload}
+              onClick={readCV}
               className="text-[#1A1A1A]/60 hover:text-primary transition-colors cursor-pointer bg-transparent border-none p-0 uppercase"
             >
-              Read.cv
+              Read CV
             </button>
           </div>
         </div>

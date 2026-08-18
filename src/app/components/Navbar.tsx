@@ -46,6 +46,10 @@ export default function Navbar({ onConnectClick }: NavbarProps) {
     }
   };
 
+  const readCV = () => {
+    window.open('/Grace_Waithera_Kaberere_CV.pdf', '_blank');
+  }
+
   return (
     <>
       <nav
@@ -82,6 +86,8 @@ export default function Navbar({ onConnectClick }: NavbarProps) {
                 )}
               </button>
             ))}
+
+            <button onClick={()=> readCV()} className='font-mono text-xs uppercase tracking-[0.25em] transition-all duration-300 relative py-1 cursor-pointer text-primary font-semibold'>Read CV</button>
 
             <button
               onClick={onConnectClick}
