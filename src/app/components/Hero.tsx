@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion, type Variants } from 'motion/react';
-import { ChevronDown, Sparkles } from 'lucide-react';
+import { ChevronDown, Sparkles, Linkedin, Github, Download } from 'lucide-react';
 
 export default function Hero() {
   const containerVariants: Variants = {
@@ -39,6 +39,11 @@ export default function Hero() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  }
+
+  const viewResume = () => {
+    const resumeUrl = '/Grace_Waithera_Kaberere_CV.pdf'; // Path to your resume file in the public folder
+    window.open(resumeUrl, '_blank');
   }
 
   return (
@@ -100,14 +105,45 @@ export default function Hero() {
         >
           Software developer focused on building reliable, maintainable solutions using clean architecture and engineering best practices—from robust backend systems to intuitive user interfaces
         </motion.p>
-        {/* <motion.div variants={itemVariants} className="space-y-4">
+         <motion.div
+          variants={itemVariants}
+          className="flex items-center justify-center gap-3 sm:gap-4 pt-3"
+        >
+          {/* Download Resume Button */}
           <button
-            onClick={() => {resumeDownload()}}
-            className="w-full text-center font-mono text-sm uppercase tracking-[0.25em] text-white bg-primary p-4 font-bold active:scale-95 transition-transform cursor-pointer hover:bg-[#1A1A1A]"
+            id="hero-download-resume"
+            onClick={viewResume}
+            className="font-mono text-xs  tracking-[0.2em] font-bold text-black bg-white hover:bg-primary px-7 py-3.5 sm:px-8 sm:py-4 rounded-xs transition-all duration-300 cursor-pointer active:scale-95 inline-flex items-center gap-2.5 shadow-sm group"
           >
-            Read CV
+            <span>View Resume</span>
           </button>
-        </motion.div> */}
+
+          {/* GitHub Logo Button */}
+          <a
+            id="hero-github-link"
+            href="https://github.com/KaberereG"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub Profile"
+            title="GitHub Profile & Repositories"
+            className="p-3.5 sm:p-4 bg-white/80 hover:bg-[#1A1A1A] border border-[#1A1A1A]/15 hover:border-[#1A1A1A] text-[#1A1A1A] hover:text-white rounded-xs transition-all duration-300 cursor-pointer active:scale-95 inline-flex items-center justify-center shadow-2xs group"
+          >
+            <Github size={18} className="transition-transform group-hover:scale-110" />
+          </a>
+
+          {/* LinkedIn Logo Button */}
+          <a
+            id="hero-linkedin-link"
+            href="https://www.linkedin.com/in/grace-kaberere-21512b167/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn Profile"
+            title="LinkedIn Profile & Network"
+            className="p-3.5 sm:p-4 bg-white/80 hover:bg-[#0A66C2] border border-[#1A1A1A]/15 hover:border-[#0A66C2] text-[#1A1A1A] hover:text-white rounded-xs transition-all duration-300 cursor-pointer active:scale-95 inline-flex items-center justify-center shadow-2xs group"
+          >
+            <Linkedin size={18} className="transition-transform group-hover:scale-110" />
+          </a>
+        </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
