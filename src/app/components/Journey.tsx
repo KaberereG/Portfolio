@@ -6,15 +6,17 @@ import { JOURNEY } from '../../data';
 import { ChevronDown, Calendar, Award, Code, CheckSquare } from 'lucide-react';
 
 export default function Journey() {
-  const [expandedId, setExpandedId] = useState<string | null>('role-1');
+  const [expandedIds, setExpandedIds] = useState<string[]>(
+  JOURNEY.map((item) => item.id)
+);
 
   const toggleExpand = (id: string) => {
-    if (expandedId === id) {
-      setExpandedId(null);
-    } else {
-      setExpandedId(id);
-    }
-  };
+  setExpandedIds((prev) =>
+    prev.includes(id)
+      ? prev.filter((itemId) => itemId !== id)
+      : [...prev, id]
+  );
+};
 
   return (
     <section id="journey" className="py-24 bg-[#F5F2ED] relative overflow-hidden border-t border-[#1A1A1A]/10">
@@ -40,7 +42,7 @@ export default function Journey() {
           <div className="space-y-16">
             {JOURNEY.map((item, index) => {
               const isEven = index % 2 === 0;
-              const isExpanded = expandedId === item.id;
+             const isExpanded = expandedIds.includes(item.id);
 
               return (
                 <div
