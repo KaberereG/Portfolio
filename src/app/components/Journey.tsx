@@ -34,7 +34,7 @@ export default function Journey() {
         </div>
 
         {/* Timeline Layout */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative mx-auto">
           {/* Vertical central bar (Desktop: centered; Mobile: left-aligned) */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-[#1A1A1A]/10 md:-translate-x-1/2" />
 
